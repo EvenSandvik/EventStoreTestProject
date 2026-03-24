@@ -1,0 +1,16 @@
+{
+  "name": "eventstore-test-project",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal EventStoreDB learning project using Node.js",
+  "scripts": {
+    "db:up": "docker-compose up -d",
+    "db:down": "docker-compose down",
+    "start": "node src/index.js",
+    "start:fresh": "node src/index.js --fresh"
+  },
+  "dependencies": {
+    "@eventstore/db-client": "^6.2.0"
+  }
+}
