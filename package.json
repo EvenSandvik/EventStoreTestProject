@@ -5,8 +5,8 @@
   "type": "module",
   "description": "Minimal EventStoreDB learning project using Node.js",
   "scripts": {
-    "db:up": "docker-compose up -d",
-    "db:down": "docker-compose down",
+    "db:up": "./scripts/db-up.sh",
+    "db:down": "./scripts/db-down.sh",
     "start": "node src/index.js",
     "start:fresh": "node src/index.js --fresh"
   },

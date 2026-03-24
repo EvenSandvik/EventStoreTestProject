@@ -47,6 +47,8 @@ npm run start:fresh
 npm run db:down
 ```
 
+The setup uses plain `docker` commands, so you do not need Docker Compose installed.
+
 ## What to learn next
 
 - use stream names per aggregate, like `order-123`
