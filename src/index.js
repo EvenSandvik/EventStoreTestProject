@@ -81,8 +81,12 @@ main()
     console.error('Failed to run EventStoreDB sample.');
     console.error(error.message);
 
-    if (error.code === 'ECONNREFUSED') {
-      console.error('Start EventStoreDB first with: npm run db:up');
+    const isConnectionError =
+      error.code === 'ECONNREFUSED' ||
+      /ECONNREFUSED|UNAVAILABLE|No connection established/i.test(error.message);
+
+    if (isConnectionError) {
+      console.error('Make sure EventStoreDB is running with: npm run db:up');
     }
 
     process.exitCode = 1;

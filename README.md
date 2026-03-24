@@ -23,6 +23,8 @@ npm install
 npm run db:up
 ```
 
+The first run downloads the EventStoreDB Docker image, so it needs an active internet connection.
+
 The EventStoreDB UI will be available at:
 
 - <http://localhost:2113>
